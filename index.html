@@ -6,6 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="script.js"></script>
+    <form action="" method="post">
+        <p><input type="text" value="abc">(text)</p>
+        <p><textarea name="textarea" id="textarea"></textarea>(textarea)</p>
+        <button>Submit</button>
+    </form>
+
+
+    <script>
+        let textInput = document.getElementById("textarea")
+        let form = document.querySelector("form");
+
+        form.addEventListener("submit", event => {
+            event.preventDefault();
+            textInput.innerHTML="Hello World!";
+        });
+    </script>
 </body>
 </html>
