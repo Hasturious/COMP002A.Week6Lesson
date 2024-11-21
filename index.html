@@ -21,7 +21,8 @@
         form.addEventListener("submit", event => {
             event.preventDefault();
             textInput.innerHTML="Hello World!";
-            console.log(document.getElementById("textarea").value)
+            console.log(document.getElementById("textarea").value);
+            localStorage.setItem(document.getElementById("textarea"));
         });
     </script>
 </body>
