@@ -15,20 +15,14 @@
         let age = document.getElementById("age");
         let hobbies = document.getElementById("hobbies");
 
-        /*
+
         sessionStorage.setItem("name", "Jean");
         sessionStorage.setItem("age", 18);
-        sessionStorage.setItem("hobbies", "video games");
-        */
-        /*
-        localStorage.setItem("name", "Jean");
-        localStorage.setItem("age", 18);
-        localStorage.setItem("hobbies", "video games");
-        */
-
-        greeting.innerText += localStorage.getItem("name");
-        age.innerText = localStorage.getItem("age");
-        hobbies.innerText = localStorage.getItem("hobbies");
+        sessionStorage.setItem("hobbies", "test");
+        
+        greeting.innerText += sessionStorage.getItem("name");
+        age.innerText = sessionStorage.getItem("age");
+        hobbies.innerText = sessionStorage.getItem("hobbies");
     </script>
 </body>
 </html>
