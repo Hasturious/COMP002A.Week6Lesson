@@ -9,7 +9,7 @@
     <form action="" method="post">
         <p><input type="text" value="abc">(text)</p>
         <p><textarea name="textarea" id="textarea"></textarea>(textarea)</p>
-        <input type="color" od="favoritecolor" name="favoritecolor" value="#ff00ff">
+        <input type="color" id="favoritecolor" name="favoritecolor" value="#ff00ff">
         <button>Submit</button>
     </form>
 
@@ -17,13 +17,27 @@
     <script>
         let textInput = document.getElementById("textarea")
         let form = document.querySelector("form");
+        let colorInput = document.getElementById("favoritecolor")
+
 
         form.addEventListener("submit", event => {
             event.preventDefault();
             textInput.innerHTML="Hello World!";
             console.log(document.getElementById("textarea").value);
-            localStorage.setItem(document.getElementById("textarea"));
+            localStorage.setItem("textareaValue", textInput.value);
+            localStorage.setItem("savedColor", colorInput.value)
+            const colorValue = colorInput.value
         });
+
+        window.addEventListener('load', function () {
+    const savedColor = localStorage.getItem('savedColor');
+    
+    if (savedColor) {
+        // If there's a saved color, output it to the console
+        console.log('Saved Color:', savedColor);
+    }
+});
+        
     </script>
 </body>
 </html>
