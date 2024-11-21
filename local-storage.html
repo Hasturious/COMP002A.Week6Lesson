@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>session</title>
+    <title>local</title>
 </head>
 <body>
     <h1 id="greeting">Hello&nbsp;</h1>
@@ -15,16 +15,16 @@
         let age = document.getElementById("age");
         let hobbies = document.getElementById("hobbies");
 
+
         /*
         sessionStorage.setItem("name", "Jean");
         sessionStorage.setItem("age", 18);
         sessionStorage.setItem("hobbies", "video games");
         */
-        /*
+
         localStorage.setItem("name", "Jean");
         localStorage.setItem("age", 18);
         localStorage.setItem("hobbies", "video games");
-        */
 
         greeting.innerText += localStorage.getItem("name");
         age.innerText = localStorage.getItem("age");
